@@ -40,3 +40,9 @@ const totalUsers = 15;
 | %      | 余り   |
 | \*\*   | 累乗   |
 | =      | 代入   |
+
+## String
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation
+
+## Function

@@ -3,4 +3,6 @@ let currentResult = defaultResult;
 
 currentResult = currentResult + 10;
 
-outputResult(currentResult, '');
+let calculationDescription = 'defaultResult';
+
+outputResult(currentResult, calculationDescription);
