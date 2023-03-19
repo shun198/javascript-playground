@@ -29,6 +29,15 @@ let _internalValue;
 const totalUsers = 15;
 ```
 
+### 文字列内に変数
+
+```javascript
+const name = 'Jim';
+const age = 30;
+console.log(`${name} is ${age} years old`);
+// Jim is 30 years old
+```
+
 ## 演算子
 
 | 演算子 | 説明   |
@@ -76,9 +85,10 @@ function add(num1, num2) {
 
 ## 型変換
 
-### 文字列を数字に変換
-
 ```javascript
+// 文字列の'15'から数字の15に型変換される
 parseInt('15');
-// 数字の15に型変換される
+
+// 数字の15から文字列の'15'に変換される
+15.toString()
 ```
