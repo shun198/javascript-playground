@@ -104,6 +104,19 @@ parseInt('15');
 15.toString()
 ```
 
+## 型の調べ方
+
+```javascript
+typeof 15;
+//'number'
+typeof '15';
+//'string'
+typeof true;
+//'boolean'
+typeof [1, 2, 3];
+//'object'
+```
+
 ## 関数
 
 `{}`の後には;(セミコロン)は入れない
