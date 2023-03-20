@@ -56,13 +56,53 @@ console.log(`${name} is ${age} years old`);
 | ++     | インクリメント |
 | --     | デクリメント   |
 
-## String
+### 型
+
+#### String
 
 ```javascript
-let calculationDescription = 'defaultResult';
+let food = 'ramen';
 ```
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation
+
+#### Int
+
+```javascript
+let age = 25;
+```
+
+#### Object
+
+```javascript
+const logEntry = {
+  name: 'John',
+  age: 27,
+};
+// logEntryのnameプロパティにアクセスする
+console.log(logEntry.name);
+// 'John'
+```
+
+#### Array
+
+```javascript
+let nums = [1, 2, 3];
+nums.push(4);
+// [1,2,3,4]
+nums[2];
+// 3
+```
+
+## 型変換
+
+```javascript
+// 文字列の'15'から数字の15に型変換される
+parseInt('15');
+
+// 数字の15から文字列の'15'に変換される
+15.toString()
+```
 
 ## 関数
 
@@ -89,14 +129,8 @@ function add(num1, num2) {
 }
 ```
 
-## 型変換
+## if
 
 ```javascript
-// 文字列の'15'から数字の15に型変換される
-parseInt('15');
 
-// 数字の15から文字列の'15'に変換される
-15.toString()
 ```
-
-## 配列
