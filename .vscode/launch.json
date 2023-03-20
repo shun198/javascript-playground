@@ -7,10 +7,19 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Chrome against localhost",
+      "name": "section-2 debug",
       // ローカル上でデバッグするときはファイルパスを指定する
       // 2章のファイルパス
       "url": "file:///Users/shun/javascript-playground/section-2/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "section-3 debug",
+      // ローカル上でデバッグするときはファイルパスを指定する
+      // 2章のファイルパス
+      "url": "file:///Users/shun/javascript-playground/section-3/index.html",
       "webRoot": "${workspaceFolder}"
     }
   ]

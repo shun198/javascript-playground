@@ -40,25 +40,55 @@ console.log(`${name} is ${age} years old`);
 
 ## 演算子
 
-| 演算子 | 説明           |
-| ------ | -------------- |
-| +      | 足し算         |
-| -      | 引き算         |
-| \*     | 掛け算         |
-| /      | 割り算         |
-| %      | 余り           |
-| \*\*   | 累乗           |
-| =      | 代入           |
-| +=     | 加算して代入   |
-| -=     | 減算して代入   |
-| \*=    | 乗算して代入   |
-| /=     | 除算して代入   |
-| ++     | インクリメント |
-| --     | デクリメント   |
+| 演算子 | 説明                     |
+| ------ | ------------------------ |
+| +      | 足し算                   |
+| -      | 引き算                   |
+| \*     | 掛け算                   |
+| /      | 割り算                   |
+| %      | 余り                     |
+| \*\*   | 累乗                     |
+| =      | 代入                     |
+| ==     | (型に関係なく)値が等しい |
+| !=     | (型に関係なく)等しくない |
+| ===    | (型も含めて)値が等しい   |
+| !==    | (型も含めて)値が等しい   |
+| +=     | 加算して代入             |
+| -=     | 減算して代入             |
+| \*=    | 乗算して代入             |
+| /=     | 除算して代入             |
+| ++     | インクリメント           |
+| --     | デクリメント             |
 
-### 型
+### == と !=
 
-#### String
+```javascript
+2 == 2;
+//true
+2 == '2';
+//true
+3 != 2;
+//true
+3 != '3';
+//false
+```
+
+### === と !==
+
+```javascript
+2 === 2;
+//true
+2 === '2';
+//false
+3 !== 2;
+//true
+3 !== '3';
+//true
+```
+
+## 型
+
+### String
 
 ```javascript
 let food = 'ramen';
@@ -66,13 +96,13 @@ let food = 'ramen';
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation
 
-#### Int
+### Int
 
 ```javascript
 let age = 25;
 ```
 
-#### Object
+### Object
 
 ```javascript
 const logEntry = {
@@ -84,7 +114,7 @@ console.log(logEntry.name);
 // 'John'
 ```
 
-#### Array
+### Array
 
 ```javascript
 let nums = [1, 2, 3];
@@ -145,5 +175,15 @@ function add(num1, num2) {
 ## if
 
 ```javascript
-
+const num = 12;
+if (num % 2 == 0) {
+  console.log('2の倍数です');
+} else if (num % 3 == 0) {
+  console.log('3の倍数です');
+} else if (num % 5 == 0) {
+  console.log('5の倍数です');
+} else {
+  console.log('2でも3でも5の倍数でもないです');
+}
+// 2の倍数です
 ```
