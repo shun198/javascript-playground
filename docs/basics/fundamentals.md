@@ -187,3 +187,9 @@ if (num % 2 == 0) {
 }
 // 2の倍数です
 ```
+
+## prompt
+
+```javascript
+prompt('Maximum Life for you and the monster.', '100');
+```
