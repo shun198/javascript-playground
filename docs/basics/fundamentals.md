@@ -188,8 +188,28 @@ if (num % 2 == 0) {
 // 2の倍数です
 ```
 
-## prompt
+## 三項演算子
 
 ```javascript
-prompt('Maximum Life for you and the monster.', '100');
+var age = 26;
+age >= 21 ? 'ビール' : 'ジュース';
+// "ビール"
 ```
+
+## switch-case
+
+## Loop
+
+### for
+
+### for-of
+
+### for-in
+
+### while
+
+### do-while
+
+### break & continue
+
+### try-catch
