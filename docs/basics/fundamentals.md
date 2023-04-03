@@ -198,18 +198,131 @@ age >= 21 ? 'ビール' : 'ジュース';
 
 ## switch-case
 
+```javascript
+const fruits = 'Papayas';
+switch (fruits) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+  case 'Mangoes':
+    console.log('Mangoes are $1.79 a pound.');
+  case 'Papayas':
+    console.log('Papayas are $2.79 a pound.');
+}
+// "Papayas are $2.79 a pound."
+```
+
 ## Loop
 
 ### for
 
+```javascript
+let str = '';
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
+
 ### for-of
+
+```javascript
+const array1 = ['a', 'b', 'c'];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ### for-in
 
+```javascript
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
+
 ### while
+
+```javascript
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// Expected output: 3
+```
 
 ### do-while
 
-### break & continue
+```javascript
+let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
+
+### break
+
+```javascript
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+
+console.log(i);
+// Expected output: 3
+```
+
+### continue
+
+```javascript
+let text = '';
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+
+console.log(text);
+// Expected output: "012456789"
+```
 
 ### try-catch
+
+```javascript
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```

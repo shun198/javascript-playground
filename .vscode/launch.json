@@ -16,10 +16,19 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "section-3 debug",
+      "name": "section-4 debug",
       // ローカル上でデバッグするときはファイルパスを指定する
       // 2章のファイルパス
-      "url": "file:///Users/shun/javascript-playground/section-3/index.html",
+      "url": "file:///Users/shun/javascript-playground/section-4/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "section-5 debug",
+      // ローカル上でデバッグするときはファイルパスを指定する
+      // 2章のファイルパス
+      "url": "file:///Users/shun/javascript-playground/section-5/index.html",
       "webRoot": "${workspaceFolder}"
     }
   ]
