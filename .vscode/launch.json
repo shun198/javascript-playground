@@ -30,6 +30,15 @@
       // 2章のファイルパス
       "url": "file:///Users/shun/javascript-playground/section-6/index.html",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "section-7 debug",
+      // ローカル上でデバッグするときはファイルパスを指定する
+      // 2章のファイルパス
+      "url": "file:///Users/shun/javascript-playground/section-7/index.html",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

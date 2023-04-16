@@ -21,3 +21,31 @@ function sum(...numbers) {
 console.log(sum(1, 2, 3)); // 6
 console.log(sum(4, 5, 6, 7)); // 22
 ```
+
+## bind 関数
+
+```javascript
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  fullName: function () {
+    return this.firstName + ' ' + this.lastName;
+  },
+};
+
+const printFullName = person.fullName.bind(person);
+
+console.log(printFullName()); // John Doe
+```
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+const evenNumbers = numbers.filter(
+  function (number) {
+    return number % 2 === 0;
+  }.bind(this)
+);
+
+console.log(evenNumbers); // [2, 4]
+```
