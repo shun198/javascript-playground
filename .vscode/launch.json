@@ -39,6 +39,13 @@
       // 2章のファイルパス
       "url": "file:///Users/shun/javascript-playground/section-7/index.html",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "javascript debug",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${file}"
     }
   ]
 }
