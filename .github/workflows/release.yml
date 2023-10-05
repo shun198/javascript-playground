@@ -1,0 +1,46 @@
+name: Release Tag And Note
+
+on:
+  pull_request:
+    # PRが閉じたタイミングで実行
+    types:
+      - closed
+    # mainブランチのみを対象とする
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    permissions:
+      contents: write
+      # リリースノートを書くためwrite用のpermissionを付与
+      pull-requests: write
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release')
+    runs-on: ubuntu-latest
+    steps:
+      # releaseタグを作成する対象のコードを取得するため、checkout
+      - name: Check out repository code
+        # https://zenn.dev/m_norii/articles/349b9ce0260631
+        uses: actions/checkout@v3
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          # このトークンは自動生成されるのでsecretsを登録する必要ない
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # PRのタイトルと内容をRelease内容に追加する
+          RELEASE_TAG: ${{ github.event.pull_request.title }}
+          BODY: ${{ github.event.pull_request.body }}
+        # どんな内容のリリースタグを作成するか
+        with:
+          # タグ名
+          tag_name: ${{ env.RELEASE_TAG }}
+          release_name: Release ${{ env.RELEASE_TAG }}
+          body: ${{ env.BODY }}
+      - name: Create Release Note
+        uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
